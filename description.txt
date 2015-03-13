@@ -1,0 +1,30 @@
+Acre was written to calculates growing-space or stand-density of trees
+in a forest. It can also be used to calculate weighted
+Voronoi-Diagrams. This means, that the area can be spilt up to the
+nearest point or to the point with the greatest influence at a certain
+place. It produces result as text and visualized (pic format is
+pbm, pgm ppm).
+
+If you have a forest and know the position and size of every tree and
+you want to know which part of the area belongs to each tree you can
+split up the area in small parts and give this part to the tree with
+the largest influence on that point.
+If every tree has the same size the result will be the same as a
+Voronoi or Thissen diagram, which split up an area to the point which
+is the nearest to the sub-area (problem of the nearest post-office).
+Usually the tree-size differs for the trees in a forest, and also the
+occupied area should be larger for larger trees than for small
+trees. So the decision which sub-area belongs to which tree was made by
+it's distance to the sub-area and the tree-size. The influence of a tree
+increases if the distance to this tree decreases and when the size of
+the tree is larger than the other trees.
+Instead of trees you can use other things to split up an area. For
+example you can use the position of petrol stations and the size of
+the petrol station increases if it's petrol price decreases. With this
+information you can estimate the area which "belongs" to a petrol
+station.
+
+The program algorithm did only compare the trees in the immediate
+environs, so that not every tree in a forest has to be checked if a
+point belongs to it. This will increase calculation time especially on
+stands with many trees.
